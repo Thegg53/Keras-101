@@ -1,0 +1,14 @@
+car1.jpg 0
+car2.jpg 0
+car3.jpg 0
+car4.jpg 0
+car5.jpg 0
+car6.jpg 0
+car7.jpg 0
+boat1.jpg 1
+boat2.jpg 1
+boat3.jpg 1
+boat4.jpg 1
+boat5.jpg 1
+boat6.jpg 1
+boat7.jpg 1
