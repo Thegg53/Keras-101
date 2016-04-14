@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 
-def train():
+def train(resize_dimensions):
     #name of folder where train images are located
     D='cnn_data_train'
     #list files in folder
@@ -40,7 +40,7 @@ def train():
     nb_classes=len(list(set(Y_train)))
 
     # reshape_dimension=32
-    rs=32
+    rs=resize_dimensions
     X_train = np.zeros((nb_train_samples, rs, rs,3), dtype="float32")
 
     for i in range(nb_train_samples):

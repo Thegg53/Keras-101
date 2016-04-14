@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 
-def test():
+def test(resize_dimensions):
     #name of folder where test images are located
     D='cnn_data_test'
     #list files in folder
@@ -36,7 +36,7 @@ def test():
         labels_test.append(z)
     Y_test=labels_test #store into Y
 
-    rs=32 # reshape_dimension=32
+    rs=resize_dimensions # reshape_dimension=32
     X_test = np.zeros((nb_test_samples, rs, rs,3), dtype="float32")
     for i in range(nb_test_samples):
         img = Image.open(D+'/'+jpg_list[i])    # Open image as PIL image object
