@@ -1,0 +1,4 @@
+download.jpg 1
+download(1).jpg 1
+download(2).jpg 0
+download(3).jpg 0

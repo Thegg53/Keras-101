@@ -1,0 +1,6 @@
+2.jpg 1
+barco.jpg 1
+d3.jpg 0
+download.jpg 1
+hyundai.jpg 0
+nissan.jpg 0
