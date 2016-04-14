@@ -49,4 +49,4 @@ def train():
         rsizeArr = np.asarray(rsize)  # Get array back
         X_train[i,:,:,:]=rsizeArr
     X_train=np.ndarray.transpose(X_train,(0,3,2,1))
-    return X_train,Y_train,nb_classes
+    return X_train,Y_train,nb_classes,rs
