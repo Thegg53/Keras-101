@@ -7,7 +7,7 @@ import numpy as np
 
 def test(resize_dimensions):
     #name of folder where test images are located
-    D='cnn_data_test'
+    D='cnn_data_test2'
     #list files in folder
     file_list=sorted(os.listdir(D))
     #extract txt file => labels

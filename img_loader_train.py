@@ -9,20 +9,23 @@ def train(resize_dimensions):
     #name of folder where train images are located
     D='cnn_data_train'
     #list files in folder
+    #file_list=sorted(os.listdir(D))
+    #########################################
     file_list=sorted(os.listdir(D))
     #extract txt file => labels
     txt_list=[]
     for file in file_list:
         if file.endswith("labels.txt"):
             txt_list.append(file)
-            #print txt_list
+    
     #extract jpg files =>images
     jpg_list=[]
     for file in file_list:
         if file.endswith(".jpg"):
             jpg_list.append(file)
-            #print jpg_list
+    
 
+    #print(sorted(jpg_list))
     nb_train_samples=len(jpg_list)
 
     #read labels file line by line
@@ -33,16 +36,18 @@ def train(resize_dimensions):
     img_name=[]
     labels_train=[]
     for i in range(len (lines)):
-        w,z=lines[i].split()
+        a=sorted(lines)
+        w,z=a[i].split()
         img_name.append(w)
         labels_train.append(z)   
-    Y_train=labels_train
+    Y_train=(labels_train)
+    #print(Y_train)
     nb_classes=len(list(set(Y_train)))
 
     # reshape_dimension=32
     rs=resize_dimensions
     X_train = np.zeros((nb_train_samples, rs, rs,3), dtype="float32")
-
+    #print jpg_list
     for i in range(nb_train_samples):
         img = Image.open(D+'/'+jpg_list[i])    # Open image as PIL image object
         rsize = img.resize((rs,rs)) # Use PIL to resize
@@ -50,3 +55,4 @@ def train(resize_dimensions):
         X_train[i,:,:,:]=rsizeArr
     X_train=np.ndarray.transpose(X_train,(0,3,2,1))
     return X_train,Y_train,nb_classes,rs
+
